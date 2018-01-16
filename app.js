@@ -376,4 +376,46 @@ if(age < 16 || age > 65){
 // TERNARY OPERATOR //  
 console.log(if === 100 ? 'CORRECT' : 'INCORRECT');
 
+/////////// SWITCHES /////////////////////////////////
+// just another way to validate conditions (does if else statements)
+// good to do with a lot of cases 
+const color = 'red';
 
+switch(color){
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    defualt:
+        console.log('color is not red or blue');
+        break;
+}
+let day;
+
+switch(new Date().newDay()){
+    case 0:
+        day = 'Sunday'
+        break;
+    case 1:
+        day = 'Monday'
+        break;
+    case 2:
+        day = 'Tuesday'
+        break;
+    case 3:
+        day = 'Wednesday'
+        break;
+    case 4:
+        day = 'Thursday'
+        break;
+    case 5:
+        day = 'Friday'
+        break;
+    case 6:
+        day = 'Saturday'
+        break;
+}
+
+console.log(`Today is ${day}`);
