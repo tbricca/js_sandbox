@@ -419,3 +419,71 @@ switch(new Date().newDay()){
 }
 
 console.log(`Today is ${day}`);
+
+////////////////////// FUNCTION DECLARATION & EXPRESSIONS ////////////////////////////////////////////
+// functions - blocks of code that can be defined and called at a 
+//          later time or some cases defined and then called at same time
+
+//FUNCTION DECLARATIONS 
+function greet(){
+    //console.log('Hello');
+    return 'Hello';
+}
+
+console.log(greet());
+
+// functions can take parameters or arguements 
+function greet(firstName, lastName){
+    if(typeof firstName === 'undefined'){firstName = 'John'}
+    if(typeof firstName === 'undefined'){firstName = 'Doe'}
+    // do this so that way you don't have to define it later 
+    //console.log('Hello');
+    return 'Hello ' + firstName + '' + lastName;
+}
+
+console.log(greet('John', 'Doe'));
+////// For ES6  ////////
+function greet(firstName = 'John', lastName = 'Doe'){
+    
+    return 'Hello ' + firstName + '' + lastName;
+}
+
+console.log(greet());
+
+// FUNCTION EXPRESSION 
+// putting a function as a variable assignment
+const square = function(x){
+    return x*x;
+};
+console.log(square(8));
+
+// IMMEDIATELY INVOKABLE FUNCTION EXPRESSIONS - IIFEs
+// a function that you declare and run at the same time
+(function(){
+    console.log('IIFE ran..');
+})()
+// add the parthensis at the end because it is a functiion 
+(function(name){
+    console.log('Hello ' + name);
+})('Brad');
+
+/// PROPERTY METHODS 
+// When a function is put inside an object it is called a method
+
+const todo = {
+    add: function(){
+        console.log('Add todo..');
+
+    },
+    edit: function(id){
+        console.log(`Edit todo ${id}`)
+    }
+} 
+
+todo.delete = function(){
+    console.log('Delete todo...');
+}
+
+todo.add();
+todo.edit(22);
+
