@@ -487,3 +487,51 @@ todo.delete = function(){
 todo.add();
 todo.edit(22);
 
+//////// GENERAL LOOPS ////////////////////////////////
+// A LOOP is an instruction that repeats until a specific condition is reached 
+// at the end of an array or when a certain number is reached
+// 4 most popular type of loops - for loops, while loops, do while loops
+// FOR LOOP
+//takes in 3 permeters seperate by a semi colon
+for(let i = 0; i < 10; i++){
+    // i++ = i + 1
+    console.log('2 is my favorite number');
+    continue; // keep going with the loop go to the next iteration
+    
+    if(i === 2){
+        console.log('Stop the loop');
+        break; // breaks out of the loop
+    }
+    console.log('Number ' + i);
+}
+
+// WHILE LOOP
+
+// for loop when you know how many times it runs 
+// while loop when its unclear 
+
+let i = 0;
+
+while(i < 10){
+    console.log('Number ' + i);
+    i++;
+}
+
+// DO WHILE
+// its going to run once no matter what 
+
+let i = 0;
+
+do { // this will make it run even if the considiton is not met
+    console.log('Number ' + i)
+    i++;
+}
+
+while(i < 10);
+
+const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+
+for(let i = 0; i < cars.length; i++){
+    console.log(cars[i]);
+    // this will print out the names of the cars 
+}
