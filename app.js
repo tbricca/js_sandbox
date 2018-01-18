@@ -633,3 +633,37 @@ val = window.navigator.platform; // can help you distinguish between windows or 
 
 
 console.log(val);
+
+///////////// BLOCK SCOPE WITH LET AND CONST //////////////////////////
+// Global Scope 
+var a = 1;
+let b = 2;
+const c = 3;
+
+function test() {
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log('Function Scope: ', a, b, c);
+}
+
+test(); 
+
+//block level
+if(true) {
+    // BLock scope
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log('If Scope: ', a, b, c);
+}
+
+
+
+
+//let and const work how most programming languages work, whereas var will get messed up if something else has the same name
+for(let a = 0; a < 10; a++) {
+    console.log(`Loop: ${a}`);
+}
+
+console.log('Global Scope:', a, b, c);
