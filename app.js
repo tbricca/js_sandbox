@@ -529,9 +529,49 @@ do { // this will make it run even if the considiton is not met
 
 while(i < 10);
 
+// LOOP THROUGH ARRAY
 const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 
 for(let i = 0; i < cars.length; i++){
     console.log(cars[i]);
     // this will print out the names of the cars 
 }
+
+// FOREACH 
+// foreach loop are cleaner and better if you're looping through an array
+const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+cars.forEach(function(car, index, array){ //using singular name of the array
+    // for each can take in 3 things - (the iterator, the index, the actual array)
+    console.log(car);
+    console.log(`${index} : ${car}`);
+    console.log(array);
+});
+
+// MAP 
+// used to return a different array 
+const users = [
+    {id:1, name: 'John'},
+    {id:2, name: 'Sara'},
+    {id:3, name: 'Karen'}
+];
+
+const ids = users.map(function(user){
+    return user.id;
+});
+
+console.log(ids);
+
+// FOR IN LOOP 
+
+const user ={
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 40
+}
+for(let x in user){
+    console.log(x); // this will give us the keys 
+    console.log(`${x} : ${user[x]}`); // this will get us the key value pairs  
+}
+
+//////////////// A LOOK AT THE WINDOW OBJECT ////////////////////////////////////////////////////////////////
+
