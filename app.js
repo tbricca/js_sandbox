@@ -574,4 +574,62 @@ for(let x in user){
 }
 
 //////////////// A LOOK AT THE WINDOW OBJECT ////////////////////////////////////////////////////////////////
+//the window is the global object in client side javascript 
+// no js a javascript runtime that runs as a stand alone process on your machine, your computer -system is your environment
+// The window object has local storage & fetch, etc.
+// WINDOW METHODS / OBJECTS / PROPERTIES 
+console.log(123);
 
+// Alert 
+window.alert('Hello World');
+
+// Prompt 
+const input = prompt()
+alert(input);
+// text box pops up 
+
+// Confirm
+if(confirm('Are you sure')){
+    console.log('Yes');
+} else {
+    console.log('No');
+}
+
+let val;
+
+//Get Outter height and width
+val = window.outerHeight;
+val = window.outerWidth;
+
+//Get Inner height and width
+val = window.innerHeight;
+val = window.innerWidth;
+
+// Scroll points 
+val = window.scrollY;
+
+// Location Object
+val = window.location;
+
+// Reddirect 
+window.location.href = 'http://google.com';
+
+// Reload
+window.location.reload();
+
+// HISTORY OBJECT 
+// can get your browsing history 
+window.history.go(-1);
+// will go back one site 
+window.history.length;
+
+// Navigator Object 
+// has to do with the web browser 
+
+val =  window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.platform; // can help you distinguish between windows or mac 
+
+
+console.log(val);
