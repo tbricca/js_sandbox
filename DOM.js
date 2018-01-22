@@ -8,3 +8,10 @@
 // Browser gives us a window object, inside that we have a document object (the loaded webpage)
 
 // not using jQuery makes it faster becasuse there's no overhead of the additional library 
+
+/////////////////// EXAMINING THE DOCUMENT OBJECT //////////////////////////////////////
+let val;
+
+c = document;
+
+console.log(val);
